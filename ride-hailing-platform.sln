@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "ride-hailing-platform\API.csproj", "{E7023998-0B06-4C3C-92EC-0C8A1D428368}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RideHailing.Application", "Application\RideHailing.Application.csproj", "{580E2946-F8BD-402D-9B56-3030695AB016}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{580E2946-F8BD-402D-9B56-3030695AB016}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RideHailing.Domain", "Domain\RideHailing.Domain.csproj", "{D6049494-FC94-4D71-BAF0-EDF98A3A0744}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{D6049494-FC94-4D71-BAF0-EDF98A3A0744}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RideHailing.Infrastructure", "Infrastructure\RideHailing.Infrastructure.csproj", "{5D4D08B3-4097-47AE-AFE3-4EC568B54A2C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{5D4D08B3-4097-47AE-AFE3-4EC568B54A2C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Worker", "Worker\Worker.csproj", "{B9A82D9F-D1CB-4660-9030-881F35D0C42E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Worker", "Worker\Worker.csproj", "{B9A82D9F-D1CB-4660-9030-881F35D0C42E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RideHailing.API", "RideHailing.API\RideHailing.API.csproj", "{50E23EAC-8158-4812-AE19-CCE26D03313D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,10 +19,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E7023998-0B06-4C3C-92EC-0C8A1D428368}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E7023998-0B06-4C3C-92EC-0C8A1D428368}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E7023998-0B06-4C3C-92EC-0C8A1D428368}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E7023998-0B06-4C3C-92EC-0C8A1D428368}.Release|Any CPU.Build.0 = Release|Any CPU
 		{580E2946-F8BD-402D-9B56-3030695AB016}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{580E2946-F8BD-402D-9B56-3030695AB016}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{580E2946-F8BD-402D-9B56-3030695AB016}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -39,6 +35,10 @@ Global
 		{B9A82D9F-D1CB-4660-9030-881F35D0C42E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B9A82D9F-D1CB-4660-9030-881F35D0C42E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B9A82D9F-D1CB-4660-9030-881F35D0C42E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50E23EAC-8158-4812-AE19-CCE26D03313D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50E23EAC-8158-4812-AE19-CCE26D03313D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50E23EAC-8158-4812-AE19-CCE26D03313D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50E23EAC-8158-4812-AE19-CCE26D03313D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
