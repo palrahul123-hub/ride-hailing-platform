@@ -16,7 +16,8 @@ namespace RideHailing.Infrastructure.EntityConfiguration
 
 
             builder.HasOne(x => x.Rider).WithMany(x => x.Trips).HasForeignKey(x => x.RiderId).OnDelete(deleteBehavior: DeleteBehavior.Restrict);
-            builder.HasOne(x => x.Driver).WithMany(x => x.Trips).HasForeignKey(x => x.DriverId).OnDelete(deleteBehavior: DeleteBehavior.Restrict);
+            builder.HasOne(x => x.Driver).WithMany().HasForeignKey(x => x.DriverId).OnDelete(deleteBehavior: DeleteBehavior.Restrict);
+            builder.HasOne(t => t.RideType).WithMany(rt => rt.Trips).HasForeignKey(t => t.RideTypeId).OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

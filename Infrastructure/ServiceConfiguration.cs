@@ -11,7 +11,7 @@ namespace RideHailing.Infrastructure
         {
             services.AddDbContext<RideHandlingDBContext>(options =>
             {
-                options.UseSqlServer(configuration.GetConnectionString("RideAppConnectionString"));
+                options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
             });
         }
     }

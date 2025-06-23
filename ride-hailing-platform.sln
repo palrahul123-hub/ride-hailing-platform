@@ -9,8 +9,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RideHailing.Domain", "Domai
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RideHailing.Infrastructure", "Infrastructure\RideHailing.Infrastructure.csproj", "{5D4D08B3-4097-47AE-AFE3-4EC568B54A2C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Worker", "Worker\Worker.csproj", "{B9A82D9F-D1CB-4660-9030-881F35D0C42E}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RideHailing.API", "RideHailing.API\RideHailing.API.csproj", "{50E23EAC-8158-4812-AE19-CCE26D03313D}"
 EndProject
 Global
@@ -31,10 +29,6 @@ Global
 		{5D4D08B3-4097-47AE-AFE3-4EC568B54A2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D4D08B3-4097-47AE-AFE3-4EC568B54A2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D4D08B3-4097-47AE-AFE3-4EC568B54A2C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B9A82D9F-D1CB-4660-9030-881F35D0C42E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B9A82D9F-D1CB-4660-9030-881F35D0C42E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B9A82D9F-D1CB-4660-9030-881F35D0C42E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B9A82D9F-D1CB-4660-9030-881F35D0C42E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{50E23EAC-8158-4812-AE19-CCE26D03313D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{50E23EAC-8158-4812-AE19-CCE26D03313D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{50E23EAC-8158-4812-AE19-CCE26D03313D}.Release|Any CPU.ActiveCfg = Release|Any CPU
