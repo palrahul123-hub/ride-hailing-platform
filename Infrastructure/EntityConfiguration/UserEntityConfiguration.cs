@@ -15,7 +15,6 @@ namespace RideHailing.Infrastructure.EntityConfiguration
 
             builder.HasMany(x => x.Trips).WithOne(x => x.Rider).HasForeignKey(x => x.RiderId);
             builder.HasMany(x => x.PaymentMethods).WithOne(x => x.User).HasForeignKey(x => x.UserId);
-            //Test By Rahul Pal
         }
     }
 }
