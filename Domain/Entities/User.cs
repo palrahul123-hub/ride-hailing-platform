@@ -10,7 +10,7 @@ namespace RideHailing.Domain.Entities
         public string PhoneNumber { get; set; }
         public UserRole Role { get; set; }
         public decimal WalletBalance { get; set; }
-
+        public string PasswordHash { get; set; }
         public ICollection<Trip> Trips { get; set; }
         public ICollection<PaymentMethod> PaymentMethods { get; set; }
 

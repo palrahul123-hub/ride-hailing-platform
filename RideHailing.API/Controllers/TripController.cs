@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using RideHailing.API.CustomException;
 using RideHailing.Application.Common;
 using RideHailing.Application.DTOs;
@@ -9,6 +10,7 @@ namespace RideHailing.API.Controllers
 
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize(Roles = "Driver")]
     public class TripController : ControllerBase
     {
         private readonly ITripService _tripService;
@@ -16,6 +18,8 @@ namespace RideHailing.API.Controllers
         {
             _tripService = tripService;
         }
+
+
 
         [HttpPost]
         public async Task<ActionResult<APIResponse<TripDto>>> Create([FromBody] TripDto tripDto)
