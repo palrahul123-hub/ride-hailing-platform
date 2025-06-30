@@ -17,6 +17,14 @@ namespace RideHailing.Application.Services
             _dbContext = dbContext;
             _mapper = mapper;
         }
+
+        public async Task<TripDto> AcceptTripAsync(Guid tripId, Guid driverId)
+        {
+            var trip = await _dbContext.Trips.Include(r => r.RideType).FirstOrDefaultAsync(t => t.Id == tripId);
+
+
+        }
+
         public async Task<TripDto> CreateTripAsync(TripDto tripDto)
         {
             var trip = _mapper.Map<Trip>(tripDto);
@@ -42,5 +50,7 @@ namespace RideHailing.Application.Services
             var data = await _dbContext.Trips.Include(r => r.RideType).Where(t => t.RiderId == userId).ToListAsync();
             return _mapper.Map<IEnumerable<TripDto>>(data);
         }
+
+
     }
 }

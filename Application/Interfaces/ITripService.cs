@@ -7,5 +7,8 @@ namespace RideHailing.Application.Interfaces
         Task<TripDto> CreateTripAsync(TripDto tripDto);
         Task<TripDto?> GetTripByIdAsync(Guid tripId);
         Task<IEnumerable<TripDto>> GetTripsByUserAsync(Guid userId);
+
+        Task<TripDto> AcceptTripAsync(Guid tripId, Guid driverId);
+
     }
 }
