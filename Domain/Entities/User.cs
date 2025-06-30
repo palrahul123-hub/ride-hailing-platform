@@ -11,6 +11,7 @@ namespace RideHailing.Domain.Entities
         public UserRole Role { get; set; }
         public decimal WalletBalance { get; set; }
         public string PasswordHash { get; set; }
+        public bool IsBlocked { get; set; }
         public ICollection<Trip> Trips { get; set; }
         public ICollection<PaymentMethod> PaymentMethods { get; set; }
 

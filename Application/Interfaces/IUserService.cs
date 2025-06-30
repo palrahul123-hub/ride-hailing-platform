@@ -7,5 +7,8 @@ namespace RideHailing.Application.Interfaces
         Task<UserDto> RegisterUserAsync(UserDto userDto);
         Task<UserDto> GetByIdAsync(Guid id);
         Task<IReadOnlyList<UserDto>> GetAllAysnc();
+        Task BlockUserAsync(Guid userId);
+        Task UnBlockUserAsync(Guid userId);
+
     }
 }

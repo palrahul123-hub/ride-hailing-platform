@@ -1,4 +1,4 @@
-﻿namespace RideHailing.API.CustomException
+﻿namespace RideHailing.Application.CustomException
 {
     public class NotFoundException : Exception
     {

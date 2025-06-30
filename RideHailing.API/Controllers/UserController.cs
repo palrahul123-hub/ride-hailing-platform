@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using RideHailing.API.CustomException;
 using RideHailing.Application.Common;
+using RideHailing.Application.CustomException;
 using RideHailing.Application.DTOs;
 using RideHailing.Application.Interfaces;
 

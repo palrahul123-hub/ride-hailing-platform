@@ -1,16 +1,16 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using RideHailing.API.CustomException;
 using RideHailing.Application.Common;
+using RideHailing.Application.CustomException;
 using RideHailing.Application.DTOs;
 using RideHailing.Application.Interfaces;
+using System.Security.Claims;
 
 namespace RideHailing.API.Controllers
 {
 
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize(Roles = "Driver")]
     public class TripController : ControllerBase
     {
         private readonly ITripService _tripService;
@@ -54,5 +54,31 @@ namespace RideHailing.API.Controllers
             return Ok(APIResponse<IEnumerable<TripDto>>.SuccessResponse(trips, "User's trips fetched"));
         }
 
+        [Authorize(Roles = "Driver")]
+        [HttpPost("{tripId}/accept")]
+        public async Task<ActionResult<APIResponse<TripDto>>> AcceptTrip(Guid tripId)
+        {
+            var driverId = Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
+            var trip = await _tripService.AcceptTripAsync(tripId, driverId);
+            return Ok(APIResponse<TripDto>.SuccessResponse(trip, "Trip accepted"));
+        }
+
+        [Authorize(Roles = "Driver")]
+        [HttpPost("{tripId}/complete")]
+        public async Task<ActionResult<APIResponse<TripDto>>> CompleteTrip(Guid tripId)
+        {
+            var driverId = Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
+            var trip = await _tripService.CompleteTripAsync(tripId, driverId);
+            return Ok(APIResponse<TripDto>.SuccessResponse(trip, "Trip completed"));
+        }
+
+        [Authorize(Roles = "Rider")]
+        [HttpPost("{tripId}/cancel")]
+        public async Task<ActionResult<APIResponse<TripDto>>> CancelTrip(Guid tripId)
+        {
+            var riderId = Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
+            var trip = await _tripService.CancelTripAsync(tripId, riderId);
+            return Ok(APIResponse<TripDto>.SuccessResponse(trip, "Trip cancelled"));
+        }
     }
 }

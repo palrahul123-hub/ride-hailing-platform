@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using RideHailing.Application.DTOs.LoginDto;
 using RideHailing.Application.Interfaces;
 
 namespace RideHailing.API.Controllers
@@ -14,10 +13,10 @@ namespace RideHailing.API.Controllers
             _authService = authService;
         }
 
-        [HttpGet]
-        public async Task<ActionResult<LoginResponseDto>> Login([FromBody] LoginRequestDto loginRequestDto)
-        {
+        //[HttpGet]
+        //public async Task<ActionResult<LoginResponseDto>> Login([FromBody] LoginRequestDto loginRequestDto)
+        //{
 
-        }
+        //}
     }
 }

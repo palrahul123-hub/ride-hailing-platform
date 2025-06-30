@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using RideHailing.Application.CustomException;
 using RideHailing.Application.DTOs;
 using RideHailing.Application.Interfaces;
 using RideHailing.Domain.Entities;
@@ -46,6 +47,26 @@ namespace RideHailing.Application.Services
             await _dbContext.SaveChangesAsync();
 
             return _mapper.Map<UserDto>(user);
+        }
+
+        public async Task BlockUserAsync(Guid userId)
+        {
+            var user = await _dbContext.Users.FindAsync(userId);
+            if (user == null)
+                throw new NotFoundException("User", userId);
+
+            user.IsBlocked = true;
+            await _dbContext.SaveChangesAsync();
+        }
+
+        public async Task UnBlockUserAsync(Guid userId)
+        {
+            var user = await _dbContext.Users.FindAsync(userId);
+            if (user == null)
+                throw new NotFoundException("User", userId);
+
+            user.IsBlocked = false;
+            await _dbContext.SaveChangesAsync();
         }
     }
 }

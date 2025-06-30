@@ -1,5 +1,5 @@
-﻿using RideHailing.API.CustomException;
-using RideHailing.Application.Common;
+﻿using RideHailing.Application.Common;
+using RideHailing.Application.CustomException;
 using System.Net;
 using System.Text.Json;
 
