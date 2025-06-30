@@ -20,6 +20,8 @@ namespace RideHailing.Application
             services.AddScoped<ITripService, TripService>();
             services.AddScoped<IUserService, UserService>();
 
+            services.AddScoped<IAuthService, CustomAuthService>();
+
             services.AddAuthentication("Bearer")
                 .AddJwtBearer("Bearer", options =>
                 {
