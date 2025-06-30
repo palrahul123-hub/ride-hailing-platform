@@ -6,6 +6,7 @@ using RideHailing.Application.Interfaces;
 
 namespace RideHailing.API.Controllers
 {
+
     [Route("api/[controller]")]
     [ApiController]
     public class TripController : ControllerBase
